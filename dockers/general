@@ -1,0 +1,8 @@
+docker run --name master -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine
+docker run --name slave01 -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine
+docker run --name slave02 -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine
+
+
+create database paasdb;
+create user dbuser with encrypted password 'kalimba';
+grant all privileges on database paasdb to dbuser;

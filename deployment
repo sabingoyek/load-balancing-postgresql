@@ -1,0 +1,125 @@
+Script started on 2021-07-12 23:49:11+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ sud [Ko systemc tl start docker.ser[Krvice
+[sudo] password for kimba: 
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docker netwo rk create pgnet
+065caf4298ec2b2cc360890e28a72a857b687689a7ddea70d6d0c51251348d77
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docek[K[Kek[K[Kker network inspect pgnet
+[
+    {
+        "Name": "pgnet",
+        "Id": "065caf4298ec2b2cc360890e28a72a857b687689a7ddea70d6d0c51251348d77",
+        "Created": "2021-07-12T23:51:31.458034998+01:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.19.0.0/16",
+                    "Gateway": "172.19.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ [H[2J(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docker network inspect pgnet[A(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docker  containe[K[K[K[K[K[K[K[Krun --name master postgres[K[K[K[K[K[K[K[K[K -e POSTGRES_PASSWORD=kalimba -p 54[K[A(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docker run --name master -e POSTGRES_PASSWORD=kalimba -p 54[K[K[K[K[K[K
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run a command in a new container
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docker run --name master -e POSTGRES_PASSWORD=kalimba -d postgres:12[K3.3-alpine[C[C[C[1@ [1@-c -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpi[1Pne[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpin[1Pe[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cw -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ck -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-network  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+docker: Error response from daemon: Conflict. The container name "/master" is already in use by container "61da44af86d6b20c5d520a0a32ffcd43891457f7631838836d4ba8d06e335466". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docker run --name master --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine
+1711120efd054d7bcf34bc6f66fcd638518354ae64035a56c7b2a721d6f13926
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docker run --name master --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres[1P:13.3-alpine[A[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:[1P13.3-alpine[A[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:1[1P3.3-alpine[A[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13[1P.3-alpine[A[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.[1P3-alpine[A[C[C[C[Cs --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[Cl --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[Ca --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:1[1P3.3-alpine[A[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13[1P.3-alpine[A[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.[1P3-alpine[A[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3[1P-alpine[A[C[C[C[Cs --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[Cl --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[Ca --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[Cv --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[Ce --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C0 --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C1 --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C
+
+212331c279ff7a5d70168305abea44a45c23314ae1bae52d559f65ef899a2c6d
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docker run --name slave01 --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgre[1Ps:13.3-alpine[A[C[C[C[C2 --network pgnet  -e POSTGRES_PASSWORD=kalimba -d postgres:13.3-alpine[A[C[C[C[C
+
+4c3639b367925f275717c18fdddd9afa87242c033835edc9982b433977d3eb40
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docke  r[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr  exce[K[Kec c[Kmaster -[K-it bash
+OCI runtime exec failed: exec failed: container_linux.go:380: starting container process caused: exec: "-it": executable file not found in $PATH: unknown
+(base) ]0;kimba@kimba-laptop: ~/workspace/master/M1/bdd/TP/my-solution[01;32mkimba@kimba-laptop[00m:[01;34m~/workspace/master/M1/bdd/TP/my-solution[00m$ docker exec master -it bash[1P bash[1P bash[1P bash[1Pbash[1@-[1@i[1@t[1@ 
+[?2004hbash-5.1# [Kbash-5.1# psql -U postgres
+[?2004lpsql (13.3)
+Type "help" for help.
+
+postgres=# create daat[22G[K[21G[Ktabase paasdb
+postgres-# create user dbuser with encrypted password ''[56Gk'[57Ga'[58Gl'[59Gi'[60Gm'[61Gb'[62Ga'
+postgres-# ;
+ERROR:  syntax error at or near "create"
+LINE 2: create user dbuser with encrypted password 'kalimba'
+        ^
+postgres=# [12Gcreate database paasdb
+create user dbuser with encrypted password 'kalimba'
+;;[A[53G[18G[P [17G[P [16G[P [15G[P [14G[P [13G[P [13G[Pw[11G[P [10G[P [9G[P [8G[P [8G[Pw[6G[P crea[P cre[P cr[P c[P [P [A[35Gwith encrypted password 'kalimba'
+;[K
+[K[2A[34G[33G[P [32G[P [32G[1@d [33G[1@b [34G[Pw[34G[Pi[34G[Pt[34G[Ph[34G[P [34G[Pe[34G[Pn[34G[Pc[34G[Pr[34G[Py[34G[Pp[34G[Pt[34G[Pe[34G[Pd[34G[P [34G[Pp[34G[Pa[34G[Ps[35G[Pw[34G[Pw[34G[Po[34G[Pr[34G[Pd[34G[P [34G[P'[34G[Pk[34G[Pa[34G[Pl[34G[Pi[34Gmba'[K[34Gba'[K[34Ga'[K[34G'[K[34G[K[34G;[35G;
+[K[A[35G[35G[K
+CREATE DATABASE
+postgres=# [12Gcreate database paasdb;[34G[K
+create user dbuser with encrypted password 'kalimba'
+;[A[53G[A[34Gb[33G[K[32G[K[31G[K[30G[K[29G[K[28G[K[27G[26G[K[25G[K[24G[K[23G[K[22G[K[21G[K[20G[K[19G[K[18G[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[12Gcreate user dbuser with encrypted password 'kalimba'
+;[K
+[K[2A[12G
+
+CREATE ROLE
+postgres=# grant all privileges on database paasdb to dbuser;
+GRANT
+postgres=# 
+postgres=# CREATE TABLE users(
+postgres(#   id integer ,
+postgres(#   "user" json
+postgres(# ) PARTITION BY RANGE(id);
+CREATE TABLE
+postgres=# CREATE TABLE apps(
+postgres(# id integer,
+postgres(# app json,
+postgres(# userid integer
+postgres(# ) PARTITION BY RANGE(userid);
+CREATE TABLE
+postgres=# CREATE EXTENSION postgres_fdw;
+CREATE EXTENSION
+postgres=# GRANT USAGE ON FOREIGN DATA WRAPPER postgres_fdw TO dbuser;
+GRANT
+postgres=# CREATE SERVER slave01 FOREIGN DATA WRAPPER postgres_fdw options ()(d)(db)(dbn)(dbna)[6Gm)[7Ge)[8G )[9G')[10G')[10Gp')[11Ga')[12Ga')[13Gs')[14Gd')[15Gb')'[17G,)[18G )[19Gh)[20Go)[21Gs)[22Gt)[23G )[24G1)[25G7)[26G2)[27G.)[28G1)[29G9)[30G.)[31G0)[32G.)[33G3)[34G')[24G[1@'1172.19.0.3'));
+CREATE SERVER
+postgres=# CREATE USER MAPPING FOR dbuser SERVER slave01
+postgres-#     OPTIONS (user 'postgres', password 'kalimba');
+CREATE USER MAPPING
+postgres=# CREATE SERVER slave01 FOREIGN DATA WRAPPER postgres_fdw options (dbname 'paasdb', host '172.19.0.3');[A[74G[32G[P[74G(([Pd[A[32G[32G[1@2
+[1@(d[A[33G FOREIGN DATA WRAPPER postgres_fdw option
+(dbname 'paasdb', host '172.19.0.3[34G');[K[34G4');
+CREATE SERVER
+postgres=# CREATE USER MAPPING FOR dbuser SERVER slave01
+postgres-#     OPTIONS (user 'postgres', password 'kalimba');[12GCREATE SERVER slave02 FOREIGN DATA WRAPPER postgres_fdw options (dbname 'paasdb', host '172.19.0.4');[A[12G    OPTIONS (user 'postgres', password 'kalimba');[K
+[K[A[62G[12GCREATE SERVER slave02 FOREIGN DATA WRAPPER postgres_fdw options (dbname 'paasdb', host '172.19.0.4');[A[19G[24@USER MAPPING FOR dbuser [56G1[K
+    OPTIONS (user 'postgres', password 'kalimba');[A[19G[24P[33G FOREIGN DATA WRAPPER postgres_fdw options (dbname 'paasdb', host '172.19.0.3');[K[A[12GGRANT USAGE ON FOREIGN DATA WRAPPER postgres_fdw TO dbuser;[K
+[K[A[71G[12GCREATE EXTENSION postgres_fdw;[K[12GGRANT USAGE ON FOREIGN DATA WRAPPER postgres_fdw TO dbuser;[12GCREATE SERVER slave01 FOREIGN DATA WRAPPER postgres_fdw options (dbname 'paasdb', host '172.19.0.3');[A[19G[24@USER MAPPING FOR dbuser [57G[K
+    OPTIONS (user 'postgres', password 'kalimba');[A[57Gslave0[56G[K[56G2
+
+ERROR:  syntax error at or near "CREATE"
+LINE 2: CREATE USER MAPPING FOR dbuser SERVER slave02
+        ^
+postgres=# [12GCREATE USER MAPPING FOR dbuser SERVER slave01
+CREATE USER MAPPING FOR dbuser SERVER slave02
+    OPTIONS (user 'postgres', password 'kalimba');[A[46G[A[57G01[56G[K[55G[K[54G[K[53G[K[52G[K[51G[K[50G[K[49G[48G[K[47G[K[46G[K[45G[K[44G[K[43G[K[42G[41G[K[40G[K[39G[K[38G[K[37G[K[36G[K[35G[34G[K[33G[K[32G[K[31G[30G[K[29G[K[28G[K[27G[K[26G[K[25G[K[24G[K[23G[22G[K[21G[K[20G[K[19G[K[18G[17G[K[16G[K[15G[K[14G[K[13G[K[12
